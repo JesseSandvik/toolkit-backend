@@ -1,3 +1,1 @@
-20220217	22:38:56	03ef185f-98ea-49b1-8947-38aecedd177f	Error: Not allowed by CORS
-20220217	23:17:26	b5e5778b-b61a-4f77-94b5-ff65be3ba26e	Error: ENOENT: no such file or directory, stat 'C:\Users\embra\toolkit-backend\routes\views\index.html'
-20220217	23:43:45	169394f8-7c16-44a6-88be-825c1b04e231	SyntaxError: Unexpected string in JSON at position 18
+20220218	09:25:02	07cd88ea-02de-4aab-9409-342eaca3f329	ReferenceError: employee is not defined
