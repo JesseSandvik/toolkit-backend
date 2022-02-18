@@ -1,8 +1,9 @@
-20220218	09:16:35	3255ee1d-32a9-40fc-83f7-0df0e06e862e	POST	undefined	/employees
-20220218	09:17:14	57ae0acf-201a-47b7-a27c-af5327014488	PUT	undefined	/employees
-20220218	09:25:02	8a702f33-eb7b-497b-b1f4-597867dba1c1	GET	undefined	/employees/1
-20220218	09:25:24	b36a542e-d8b9-4a52-9c8a-ff405467b586	GET	undefined	/employees/1
-20220218	09:30:18	cd27b4d9-0146-4e3e-b72f-de728759430e	POST	undefined	/employees
-20220218	09:30:48	3d4b989a-a85b-4f8c-89f6-9b8c332adfec	POST	undefined	/employees
-20220218	09:31:21	18710672-86f1-4d4b-b6e9-96444fc30e24	DELETE	undefined	/employees
-20220218	09:31:34	25c13bd0-ae75-4adf-9230-c3de88bf32a9	GET	undefined	/employees/3
+20220218	10:14:33	b2ddedfd-2d06-4f2a-97fa-f47c8eb9edef	OPTIONS	https://www.google.com	/
+20220218	10:14:33	4bacacd8-59ec-412a-bf09-8057f9c45bf4	GET	https://www.google.com	/
+20220218	10:26:10	9a594b47-825a-4fe0-aee9-f24c814716b4	GET	undefined	/register
+20220218	10:28:15	81583308-c3b8-4a9e-bd9a-44df0f01202a	POST	undefined	/register
+20220218	10:42:50	16c4f213-be3f-4446-9a63-9382a535e384	POST	undefined	/register
+20220218	10:43:04	cdd91d17-efaf-466e-bffa-639200f9a69c	POST	undefined	/auth
+20220218	10:43:33	9b4b988c-715b-4953-9ba0-8abbcd0127be	POST	undefined	/auth
+20220218	10:43:41	e90fe1a6-1de4-438c-ac11-a95b383cf410	POST	undefined	/auth
+20220218	11:10:59	651582d8-1851-4ad7-9c97-89ce775c6cbc	POST	undefined	/register

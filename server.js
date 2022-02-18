@@ -5,8 +5,6 @@ const cors = require('cors');
 const corsOptions = require('./config/corsOptions');
 const { logger } = require('./middleware/logEvents');
 const errorHandler = require('./middleware/errorHandler');
-const employeesRouter = require('./routes/api/employees');
-const rootRouter = require('./routes/root');
 
 const PORT = process.env.PORT || 5000;
 
@@ -26,8 +24,10 @@ app.use(express.json());
 // serves static files
 app.use('/', express.static(path.join(__dirname, '/public')));
 
-app.use('/', rootRouter);
-app.use('/employees', employeesRouter);
+app.use('/', require('./routes/root'));
+app.use('/register', require('./routes/register'));
+app.use('/auth', require('./routes/auth'));
+app.use('/employees', require('./routes/api/employees'));
 
 app.all('*', (req, res) => {
     res.status(404);

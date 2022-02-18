@@ -1,1 +1,2 @@
-20220218	09:25:02	07cd88ea-02de-4aab-9409-342eaca3f329	ReferenceError: employee is not defined
+20220218	10:14:33	0c1da207-2d3a-467b-ab5d-bd55b61a130a	Error: Not allowed by CORS
+20220218	10:14:33	9fadf6ea-a3a8-426e-a1fc-becdfeb11a42	Error: Not allowed by CORS
