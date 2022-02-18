@@ -1,3 +1,0 @@
-20220217	17:21:06	a15ef9c8-2fbd-4f56-a6e5-cf48f14d8d99	Log event emitted!
-20220217	17:21:17	4ed448dd-f2c8-4da0-967e-3e316421c0c7	Log event emitted!
-20220217	19:23:28	90626bcb-d501-4193-8d2b-576f1cb37b21	Log event emitted!
