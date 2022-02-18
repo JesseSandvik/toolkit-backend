@@ -1,0 +1,14 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  display: grid;
+  font-size: 36px;
+  min-height: 100vh;
+  place-content: center;
+}
