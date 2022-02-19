@@ -27,10 +27,16 @@ const handleLogin = async (req, res) => {
 
     if (match) {
         // create JWTs here
+        const roles = Object.values(userExists.roles);
         const accessToken = jwt.sign(
-            { 'username': userExists.username },
+            { 
+                'userInfo': {
+                    'username': userExists.username,
+                    'roles': roles
+                }
+            },
             process.env.ACCESS_TOKEN_SECRET,
-            { expiresIn: '30s' }
+            { expiresIn: '50s' }
         );
 
         const refreshToken = jwt.sign(

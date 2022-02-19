@@ -3,3 +3,4 @@
 20220218	13:28:24	b65ca269-6279-41fd-a08d-b0f375a83deb	TypeError: allowedOrigins.includes is not a function
 20220218	13:32:16	6087414c-4d15-43ca-ab5c-f65435e32491	Error: Not allowed by CORS
 20220218	13:32:16	14763d0e-26fe-4be6-83a1-9ff75359ca5e	Error: Not allowed by CORS
+20220218	22:02:24	9565ed61-647a-4a96-ae1f-e160abfac595	TypeError: req.roles.map is not a function
