@@ -5,7 +5,6 @@ const usersDB = {
 
 const fsPromises = require('fs').promises;
 const path = require('path');
-const { resourceUsage } = require('process');
 
 const handleLogout = async (req, res) => {
     // on client also delete access token
