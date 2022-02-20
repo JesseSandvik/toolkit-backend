@@ -116,3 +116,5 @@
 20220218	22:14:37	0c75554b-d366-4d61-bc8b-63a0096f5eb5	GET	undefined	/employees
 20220218	22:14:53	94712435-6b37-479e-b0cc-a608e289bbaa	GET	undefined	/employees
 20220218	22:14:57	ea7d60fd-b5ea-4676-acb0-9f894892e1dd	DELETE	undefined	/employees
+20220220	16:12:51	6a3ae2c1-2db9-419a-9695-d9690226e41a	POST	undefined	/register
+20220220	16:13:47	124545a6-c8f2-4a76-ae4a-2e20c060d4c2	POST	undefined	/register
