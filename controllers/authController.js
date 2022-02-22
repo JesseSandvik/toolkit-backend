@@ -1,14 +1,10 @@
-const usersDB = {
-    users: require('../model/users.json'),
-    setUsers: function (data) { this.users = data }
-}
+const User = require('../model/User');
 
 // generate random crypo string require('crypto').randomBytes(64).toString('hex')
 
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const fsPromises = require('fs').promises;
-const path = require('path');
+
 
 const handleLogin = async (req, res) => {
     const { user, password } = req.body;
@@ -16,7 +12,7 @@ const handleLogin = async (req, res) => {
     if (!user || !password) {
         return res.status(400).json({ 'message': `Username and password are required.` });
     }
-    const userExists = usersDB.users.find(currentUser => currentUser.username === user);
+    const userExists = await User.findOne({ username: user }).exec();
 
     if (!userExists) {
         return res.sendStatus(401); //Unauthorized
@@ -44,14 +40,11 @@ const handleLogin = async (req, res) => {
             { expiresIn: '1d' }
         );
         // saving refresh token with user
-        const otherUsers = usersDB.users.filter(notCurrentUser => notCurrentUser.username !== userExists.username);
-        const currentUser = { ...userExists, refreshToken };
-        usersDB.setUsers([...otherUsers, currentUser]);
-        await fsPromises.writeFile(
-            path.join(__dirname, '..', 'model', 'users.json'),
-            JSON.stringify(usersDB.users)
-        );
-        res.cookie('jwt', refreshToken, { httpOnly: true, sameSite: 'None', secure: true, maxAge: 24 * 60 * 60 * 1000 });
+        userExists.refreshToken = refreshToken;
+        const result = await userExists.save();
+        console.log(result);
+
+        res.cookie('jwt', refreshToken, { httpOnly: true, sameSite: 'None', maxAge: 24 * 60 * 60 * 1000 }); // secure: true,
         res.json({ accessToken });
     } else {
         res.sendStatus(401);

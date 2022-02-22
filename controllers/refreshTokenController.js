@@ -1,11 +1,7 @@
-const usersDB = {
-    users: require('../model/users.json'),
-    setUsers: function (data) { this.users = data }
-}
-
+const User = require('../model/User');
 const jwt = require('jsonwebtoken');
 
-const handleRefreshToken = (req, res) => {
+const handleRefreshToken = async (req, res) => {
     const cookies = req.cookies;
 
     if (!cookies?.jwt) {
@@ -13,8 +9,7 @@ const handleRefreshToken = (req, res) => {
     }
     const refreshToken = cookies.jwt;
 
-    const userExists = usersDB.users.find(currentUser => currentUser.refreshToken === refreshToken);
-
+    const userExists = await User.findOne({ refreshToken }).exec();
     if (!userExists) {
         return res.sendStatus(403); //Forbidden
     }
